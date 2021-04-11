@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+
+import 'package:estados/pages/pagina2_page.dart';
 
 
 class Pagina1Page extends StatelessWidget {
@@ -13,7 +17,11 @@ class Pagina1Page extends StatelessWidget {
 
      floatingActionButton: FloatingActionButton(
        child: Icon( Icons.accessibility_new ),
-       onPressed: () => Navigator.pushNamed(context, 'pagina2')
+      //  onPressed: () => Navigator.pushNamed(context, 'pagina2')
+       onPressed: () => Get.toNamed('pagina2', arguments: {
+         'nombre':'Fernando',
+         'edad': 35
+       })
      ),
    );
   }
